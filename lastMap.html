@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_595e00c59b300c907126c372f032836a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_595e00c59b300c907126c372f032836a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_595e00c59b300c907126c372f032836a = L.map(
+                "map_595e00c59b300c907126c372f032836a",
+                {
+                    center: [40.825082, 16.554674],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3e9d211952ace2b3a8522dac305b14bf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_3e9d211952ace2b3a8522dac305b14bf.addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var marker_a48cd00e0ea4b3b338be1443a778d838 = L.marker(
+                [40.8340078, 16.5529869],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var icon_9646d145fb4e7c791d53d9fd2d6852d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-user-doctor", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a48cd00e0ea4b3b338be1443a778d838.setIcon(icon_9646d145fb4e7c791d53d9fd2d6852d8);
+        
+    
+            marker_a48cd00e0ea4b3b338be1443a778d838.bindTooltip(
+                `<div>
+                     Medico Incampo-Viale Regina Margherita 86
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2ddef77ff3deff7e9434a04799d364a6 = L.marker(
+                [40.825082, 16.554674],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var icon_7e0740b1d20a22dadeacf5455aa60e7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fas fa-person-walking", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_2ddef77ff3deff7e9434a04799d364a6.setIcon(icon_7e0740b1d20a22dadeacf5455aa60e7f);
+        
+    
+            marker_2ddef77ff3deff7e9434a04799d364a6.bindTooltip(
+                `<div>
+                     Via Verona 7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33414ce0e89b8651d18eec08006ab5ce = L.marker(
+                [16.554628, 16.554628],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_33414ce0e89b8651d18eec08006ab5ce.bindTooltip(
+                `<div>
+                     Corso Umberto I 45
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ab19beb82c945240c3d0b59fe206a05 = L.marker(
+                [16.555676, 16.555676],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_0ab19beb82c945240c3d0b59fe206a05.bindTooltip(
+                `<div>
+                     Corso Umberto I 69
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_703f1d8768142512b6a6b95d596a9cf3 = L.marker(
+                [16.556446, 16.556446],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_703f1d8768142512b6a6b95d596a9cf3.bindTooltip(
+                `<div>
+                     Corso Umberto I 142
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1cd92a5e825c3863f1c40ac80997ce8 = L.marker(
+                [16.556568, 16.556568],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_b1cd92a5e825c3863f1c40ac80997ce8.bindTooltip(
+                `<div>
+                     Corso Vittorio Emanuele II 146
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1374cb5b69ee8528714989beef76c9a = L.marker(
+                [16.555814, 16.555814],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_b1374cb5b69ee8528714989beef76c9a.bindTooltip(
+                `<div>
+                     Corso Vittorio Emanuele II 96
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5015ea87885e219ce764fd79a3e6e177 = L.marker(
+                [16.555402, 16.555402],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_5015ea87885e219ce764fd79a3e6e177.bindTooltip(
+                `<div>
+                     Corso Vittorio Emanuele II 34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b85518975279aea9946664c5e59f71af = L.marker(
+                [16.554831, 16.554831],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_b85518975279aea9946664c5e59f71af.bindTooltip(
+                `<div>
+                     Corso Vittorio Emanuele II 18
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ceeb051c8292a4518554b2f66dedcedf = L.marker(
+                [16.554431, 16.554431],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_ceeb051c8292a4518554b2f66dedcedf.bindTooltip(
+                `<div>
+                     Piazza Unita d'Italia 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17b4858440bd1986c581791d48fd0d09 = L.marker(
+                [16.554499, 16.554499],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_17b4858440bd1986c581791d48fd0d09.bindTooltip(
+                `<div>
+                     Piazza Unita D'Italia 2/2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3e0870e4d8ae4747517f85178e1ae75 = L.marker(
+                [16.55382, 16.55382],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_b3e0870e4d8ae4747517f85178e1ae75.bindTooltip(
+                `<div>
+                     Piazza Unita D'Italia Centro
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f95f6bfb78aaa0c0e6435fb1aba096c2 = L.marker(
+                [16.553695, 16.553695],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_f95f6bfb78aaa0c0e6435fb1aba096c2.bindTooltip(
+                `<div>
+                     Via Giosue Carducci 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ebc2163921e409534f4aa1812c6812a = L.marker(
+                [16.553047, 16.553047],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_3ebc2163921e409534f4aa1812c6812a.bindTooltip(
+                `<div>
+                     Piazza Unita d'Italia(2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a1d934ff4fb6e86d836a600d5c0cc61 = L.marker(
+                [16.552585, 16.552585],
+                {}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            marker_5a1d934ff4fb6e86d836a600d5c0cc61.bindTooltip(
+                `<div>
+                     Viale Regina Margherita 49(2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_79e87937300ee765d7e24ee510f5475d = L.polyline(
+                [[40.825082, 16.554674], [40.825387, 16.554628]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_dd7e42f0d13af804cd71dfa9d2398216 = L.polyline(
+                [[40.825387, 16.554628], [40.825519, 16.555676]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_a4d30c8e6ff6dfd703019f7c0da89b30 = L.polyline(
+                [[40.825519, 16.555676], [40.825905, 16.556446]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_08ee95622f0f938d4662fa28269a9188 = L.polyline(
+                [[40.825905, 16.556446], [40.826686, 16.556568]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_129ed617e7c9bf8148bfc287bd0ffc66 = L.polyline(
+                [[40.826686, 16.556568], [40.827789, 16.555814]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_9c32a856bddc1f97a976f8c3a0f9f714 = L.polyline(
+                [[40.827789, 16.555814], [40.828383, 16.555402]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_6cedfe1beb97d8c0f1009d5a7660669d = L.polyline(
+                [[40.828383, 16.555402], [40.828879, 16.554831]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_25d8b68d4ebdd56eeb2834c4e7b7d4aa = L.polyline(
+                [[40.828879, 16.554831], [40.82931, 16.554431]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_f855ea85d6f351d965835d63145a7ae7 = L.polyline(
+                [[40.82931, 16.554431], [40.829398, 16.554499]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_7e490ae849cd83bd42f7816601a3a0e6 = L.polyline(
+                [[40.829398, 16.554499], [40.829808, 16.55382]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_38541202e19efe0b5667e47401ce7237 = L.polyline(
+                [[40.829808, 16.55382], [40.829942, 16.553695]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_6a73269c8f6030a9360b5a6f79daf2d7 = L.polyline(
+                [[40.829942, 16.553695], [40.831886, 16.553047]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_d795eff3a64ccadb6b3c68fb22482fb2 = L.polyline(
+                [[40.831886, 16.553047], [40.833416, 16.552585]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+    
+            var poly_line_3f5879fd843210bedc12a8890795a3f9 = L.polyline(
+                [[40.833416, 16.552585], [40.8340078, 16.5529869]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_595e00c59b300c907126c372f032836a);
+        
+</script>
+</html>
