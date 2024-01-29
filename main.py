@@ -1,3 +1,5 @@
+from matplotlib import pyplot as plt
+
 import classifiers,metrics
 from Dataset import data_Handling
 import pandas as pd
@@ -255,15 +257,14 @@ print("\n\n\n")
 train_Classifiers_Accuracies = ((KNN_train_Unhyper / 100).mean() * 100, (BAYES_train_Unhyper / 100).mean() * 100, (RF_train_Unhyper / 100).mean() * 100, (DT_train_Unhyper / 100).mean() * 100, (SVC_train_Unhyper / 100).mean() * 100, (LOGREG_train_Unhyper / 100).mean() * 100)
 test_Classifiers_Accuracies = ((KNN_test_Unhyper / 100).mean() * 100, (BAYES_test_Unhyper / 100).mean() * 100, (RF_test_Unhyper / 100).mean() * 100, (DT_test_Unhyper / 100).mean() * 100, (SVC_test_Unhyper / 100).mean() * 100, (LOGREG_test_Unhyper / 100).mean() * 100)
 Classifiers_StdDeviation = ((KNN_test_Unhyper / 100).std() * 100, (BAYES_test_Unhyper / 100).std() * 100, (RF_test_Unhyper / 100).std() * 100, (DT_test_Unhyper / 100).std() * 100, (SVC_test_Unhyper / 100).std() * 100, (LOGREG_test_Unhyper / 100).std() * 100)
-metrics.classifiersComparison(train_Classifiers_Accuracies, test_Classifiers_Accuracies, 'No Hyperparameters')
+metrics.classifiersComparison(train_Classifiers_Accuracies, test_Classifiers_Accuracies, Classifiers_StdDeviation,'No Hyperparameters')
 
 ## With Hyperparameters
 train_Classifiers_Accuracies = ((KNN_train_Hyper / 100).mean() * 100, (BAYES_train_Hyper / 100).mean() * 100, (RF_train_Hyper / 100).mean() * 100, (DT_train_Hyper / 100).mean() * 100, (SVC_train_Hyper / 100).mean() * 100, (LOGREG_train_Hyper / 100).mean() * 100)
 test_Classifiers_Accuracies = ((KNN_test_Hyper / 100).mean() * 100, (BAYES_test_Hyper / 100).mean() * 100, (RF_test_Hyper / 100).mean() * 100, (DT_test_Hyper / 100).mean() * 100, (SVC_test_Hyper / 100).mean() * 100, (LOGREG_test_Hyper / 100).mean() * 100)
 Classifiers_StdDeviation = ((KNN_test_Hyper / 100).std() * 100, (BAYES_test_Hyper / 100).std() * 100, (RF_test_Hyper / 100).std() * 100, (DT_test_Hyper / 100).std() * 100, (SVC_test_Hyper / 100).std() * 100, (LOGREG_test_Hyper / 100).std() * 100)
-metrics.classifiersComparison(train_Classifiers_Accuracies, test_Classifiers_Accuracies, 'With Hyperparameters')
+metrics.classifiersComparison(train_Classifiers_Accuracies, test_Classifiers_Accuracies, Classifiers_StdDeviation, 'With Hyperparameters')
 
-#TODO Fare i grafici condivisi di test e train, con e senze iperparametri. Quindi due plot: uno per il train dove si confronta per ogni class. con e senza iperparametri e l'altro plot del test dove si fa la stessa cosa
 
 print(Unhyper_results)
 print("\n")
@@ -346,7 +347,7 @@ for classifier in classifier_List:
         pred_Disease(classifier, symptyomsssss5)
         pred_Disease(classifier, symptyomsssss6)
         pred_Disease(classifier, symptyomsssss7)
-        pred_Disease(classifier, symptyomsssss8)        
+        pred_Disease(classifier, symptyomsssss8)
     else:
         print("######## Hyper ######## ")
         pred_Disease(classifier, symptyomsssss)
@@ -356,7 +357,7 @@ for classifier in classifier_List:
         pred_Disease(classifier, symptyomsssss5)
         pred_Disease(classifier, symptyomsssss6)
         pred_Disease(classifier, symptyomsssss7)
-        pred_Disease(classifier, symptyomsssss8)  
+        pred_Disease(classifier, symptyomsssss8)
 
         print("\n")    
 

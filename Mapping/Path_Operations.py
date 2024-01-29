@@ -8,7 +8,7 @@ import os
 SYSTEM_ROOTDIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath('IconProject'))))
 
 # File da cui caricare la mappa
-MAP_PATH = "//Mapping/Altamura.csv"
+MAP_PATH = "/Users/antonio/Downloads/disease_prediction_project/Mapping/Altamura.csv"
 
 """
 Creazione di una mappa su file system, dato un file csv, passato in input
@@ -86,7 +86,7 @@ def findPath(startPosition: GeoLocation.Position, goalPosition: GeoLocation.Posi
     return pathCost
 
 """
-Implementazione di uan funzione euristica utilizzata all'interno delle ricerche euristiche
+Implementazione di una funzione euristica utilizzata all'interno delle ricerche euristiche
 L'implementazione adottata è quella della distanza euclidea che risulta ottimale per il calcolo della distanza in linea d'aria tra due coordinate
 Funzione ammissibile e dunque non sovrastima il costo effettivo della distanza
 """
@@ -96,4 +96,4 @@ def eucledian_Heuristic(positionA: GeoLocation.Position, positionB: GeoLocation.
 
 createMap(MAP_PATH)
 
-#showMap("lastMap.html")    
+showMap("lastMap.html")

@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'C:\Users\Andrei\Documents\IconProject\GUI\SecondWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,14 +12,23 @@ from Mapping.GeoLocation import loadPositions, Position
 from Mapping.Path_Operations import *
 
 import os
+
+import webbrowser
+
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath('IconProject'))))
 
 # File da cui caricare la mappa
-MAP_HTML_PATH_PATHSEARCH = "//currentMap.html"
-MAP_HTML_PATH_NORMAL = "//currentMap.html"
+MAP_HTML_PATH_PATHSEARCH = "/Users/antonio/Downloads/disease_prediction_project/lastMap.html"
+MAP_HTML_PATH_NORMAL = "/Users/antonio/Downloads/disease_prediction_project/currentMap.html"
+
+# Specifica il percorso del browser eseguibile (Chrome in questo caso)
+safari_path = "/Applications/Safari.app"
+webbrowser.register('chrome', None, webbrowser.BackgroundBrowser(safari_path))
+
+
 
 # File da cui caricare la mappa
-MAP_CSV_PATH = "//Mapping/Altamura.csv"
+MAP_CSV_PATH = "/Users/antonio/Downloads/disease_prediction_project/Mapping/Altamura.csv"
 
 class Ui_SecondWindow(object):
     def setupUi(self, SecondWindow):
@@ -392,6 +399,7 @@ class Ui_SecondWindow(object):
         self.retranslateUi(SecondWindow)
         QtCore.QMetaObject.connectSlotsByName(SecondWindow)
 
+
     def retranslateUi(self, SecondWindow):
         _translate = QtCore.QCoreApplication.translate
         SecondWindow.setWindowTitle(_translate("SecondWindow", "MainWindow"))
@@ -399,6 +407,14 @@ class Ui_SecondWindow(object):
         self.pushButton_5.setText(_translate("SecondWindow", "CERCA AIUTO MEDICO PIÙ VICINO"))
         self.lineEdit_2.setText(_translate("SecondWindow", "Scegli il medico oppure l\'ospedale dove vuoi andare"))
         self.pathResult.setPlaceholderText(_translate("SecondWindow", "Il costo del percorso trovato apparirà qui, una volta trovato"))
+
+
+        self.btnOpenPathMap = QtWidgets.QPushButton(SecondWindow)
+        self.btnOpenPathMap.setGeometry(QtCore.QRect(300, 460, 200, 32))
+
+        self.btnOpenPathMap.setObjectName("btnOpenPathMap")
+        self.btnOpenPathMap.setText("Mostra Percorso")
+        self.btnOpenPathMap.clicked.connect(self.viewMapPath)
 
     def __init__(self):
         self.positions = [] 
@@ -428,22 +444,25 @@ class Ui_SecondWindow(object):
             pathCost /= 1000
             pathCost = round(pathCost, 2)
             pathCost = str(pathCost)
-            print(f"Il costo di questo percorso e' di: " + pathCost + " Chilometri")
+            print(f"Lunghezza percorso : " + pathCost + " Chilometri")
             self.pathResult.clear()
-            self.pathResult.setText(f"Il costo di questo percorso e' di: " + pathCost + " Chilometri")
+            self.pathResult.setText(f"Lunghezza percorso : " + pathCost + " Chilometri")
         else:
             pathCost = round(pathCost, 2)
             pathCost = str(pathCost)
-            print(f"Il costo di questo percorso e' di: " + pathCost + " Metri")
+            print(f"Lunghezza percorso : " + pathCost + " Metri")
             self.pathResult.clear()
-            self.pathResult.setText(f"Il costo di questo percorso e' di: " + pathCost + " Metri")
-        self.viewMapPath()       
+            self.pathResult.setText(f"Lunghezza percorso : " + pathCost + " Metri")
+        #self.viewMapPath()
+
 
     def viewMap(self):
-        webbrowser.open_new_tab(MAP_HTML_PATH_NORMAL)
+        # Apri il file HTML con il browser specificato
+        webbrowser.get('safari').open("file://" +MAP_HTML_PATH_NORMAL)
+
 
     def viewMapPath(self):
-        webbrowser.open_new_tab(MAP_HTML_PATH_PATHSEARCH)    
+        webbrowser.get('safari').open("file://" +MAP_HTML_PATH_PATHSEARCH)
 
 
 if __name__ == "__main__":

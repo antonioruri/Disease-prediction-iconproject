@@ -2397,7 +2397,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">SINTOMI DA CUI SCEGLIERE</span></p></body></html>"))
-        self.pushButton.setText(_translate("MainWindow", "RESET SCELTE SINTOMI"))
+        self.pushButton.setText(_translate("MainWindow", "RESET SINTOMI"))
         self.pushButton_2.setText(_translate("MainWindow", "PREDICT MALATTIA"))
         self.plainTextEdit.setPlainText(_translate("MainWindow", "\n"""))
         self.pushButton_3.setText(_translate("MainWindow", "CAMBIO CLASSIFICATORE"))
@@ -2407,7 +2407,7 @@ class Ui_MainWindow(object):
         current_classifier_name = "        Classificatore correntemente in uso: " + self.comboBox.currentText()
         self.lineEdit.setText(current_classifier_name)
         self.plainTextEdit.setPlainText("Una volta effettuata una predizione, il suo risultato apparirà qui.")
-        self.actionKB.setText(_translate("MainWindow", "Ask KB"))
+        self.actionKB.setText(_translate("MainWindow", "Ask KnowledgeBase"))
 
 def predict_Disease():
     

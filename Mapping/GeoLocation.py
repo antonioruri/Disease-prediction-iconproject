@@ -43,7 +43,8 @@ class Position(object):
         return hash(str(self))   
 
 """
-Funzione che dato un file csv contenente le posizioni da caricare, crea un insieme di nodi rappresentanti i vari luoghi e un insieme di archi che rappresentano i collegamenti tra luoghi
+Funzione che dato un file csv contenente le posizioni da caricare, crea un insieme 
+di nodi rappresentanti i vari luoghi e un insieme di archi che rappresentano i collegamenti tra luoghi
 """
 def loadPositions(Positions_FilePath):
     nodes = []
